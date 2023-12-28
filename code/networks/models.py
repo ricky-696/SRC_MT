@@ -63,7 +63,8 @@ class DenseNet121(nn.Module):
             out_u = self.densenet121.Linear_u(out).view(n_batch, 1, -1)
             out = torch.cat((out_0, out_1, out_u), dim=1)
             
-        return self.activations, out
+        # return self.activations, out
+        return out
 
 class DenseNet161(nn.Module):
     """Model modified.
